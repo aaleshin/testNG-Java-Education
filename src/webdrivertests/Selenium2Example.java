@@ -13,7 +13,7 @@ package webdrivertests;
 	    	System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");
 	        WebDriver driver = new ChromeDriver();
 
-	        //	    	System.setProperty("webdriver.gecko.driver", "D:\\downloads\\avtotests\\geckodriver.exe");
+//	    	System.setProperty("webdriver.gecko.driver", "D:\\downloads\\avtotests\\geckodriver.exe");
 //	    	WebDriver driver = new FirefoxDriver();     
 	        
 	        driver.get("http://www.google.com");

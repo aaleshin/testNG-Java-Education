@@ -10,16 +10,20 @@ package webdrivertests;
 
 	public class Selenium2Example  {
 	    public static void main(String[] args) {
-	        
 	    	System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");
 	        WebDriver driver = new ChromeDriver();
-//	    	System.setProperty("webdriver.gecko.driver", "D:\\downloads\\avtotests\\geckodriver.exe");
+
+	        //	    	System.setProperty("webdriver.gecko.driver", "D:\\downloads\\avtotests\\geckodriver.exe");
 //	    	WebDriver driver = new FirefoxDriver();     
+	        
 	        driver.get("http://www.google.com");
 	        WebElement element = driver.findElement(By.name("q"));
+	        
 	        element.sendKeys("Cheese!");
 	        element.submit();
+	        
 	        System.out.println("Page title is: " + driver.getTitle());
+	        
 	        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
 	            public Boolean apply(WebDriver d) {
 	                return d.getTitle().toLowerCase().startsWith("cheese!");

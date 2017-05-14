@@ -13,7 +13,7 @@ public class HomePage {
 	@FindBy(linkText="Issues")
 	private WebElement newIssue;
 	
-	@FindBy(linkText="probe")
+	@FindBy(linkText="Probe")
 	private WebElement createdBug;
 	
 	public void newIssue() {

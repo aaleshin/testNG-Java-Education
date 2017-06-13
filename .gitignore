@@ -3,3 +3,6 @@
 .project
 .idea/
 *.iml
+.settings/
+/target/
+test-output/

@@ -42,7 +42,7 @@ public class LoginTests {
         LoginPage loginPage = new LoginPage(driver);
         HomePage page = loginPage.login(name, passwd);
 
-        Assert.assertTrue(page.isElementPresent(By.linkText(client)));
+        Assert.assertTrue(page.isLinkPresent(client));
         page.logout();
     }
 
@@ -53,7 +53,7 @@ public class LoginTests {
         LoginPage loginPage = new LoginPage(driver);
         loginPage = loginPage.login(name, passwd).logout();
 
-        Assert.assertTrue(loginPage.isElementPresent(By.linkText(login)));
+        Assert.assertTrue(loginPage.isLinkPresent(login));
     }
 
     @Test
@@ -61,6 +61,7 @@ public class LoginTests {
         final String wrongname = "aleshina";
         final String wrongpasswd = "547348a";
         final String exept = "Неправильное имя пользователя или пароль";
+
         driver.get(baseUrl + "/");
 
         LoginPage loginPage = new LoginPage(driver);

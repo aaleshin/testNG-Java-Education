@@ -21,4 +21,8 @@ public class BasePage {
             return false;
         }
     }
+
+    public boolean isLinkPresent(String text) {
+        return isElementPresent(By.linkText(text));
+    }
 }

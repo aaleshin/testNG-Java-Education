@@ -25,12 +25,6 @@ public class HomePage extends CommonPage {
         super(driver);
     }
 
-    public IssuePage newIssue() {
-		highSchoolLink.click();
-		issueLink.click();
-        return new IssuePage(driver);
-    }
-	
 	public HomePage createdIssue(){
 		newIssue.click();
 		createdBug.click();

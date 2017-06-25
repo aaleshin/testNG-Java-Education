@@ -21,7 +21,6 @@ public class LoginTests {
     private static final String client = "Aleshin";
     private static final String login = "Войти";
 
-
     @BeforeClass
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
+
 	@FindBy(linkText="Войти")
 	private WebElement loginLink;
 
@@ -31,7 +32,19 @@ public class LoginPage extends BasePage {
 		return new HomePage(driver);
 	}
 
-	public void name() {
+	public WebElement getLoginLink() {
+		return loginLink;
+	}
 
-    }
+	public WebElement getNameInput() {
+		return nameInput;
+	}
+
+	public WebElement getLoginButton() {
+		return loginButton;
+	}
+
+	public WebElement getPasswdInput() {
+		return passwdInput;
+	}
 }

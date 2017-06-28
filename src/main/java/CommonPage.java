@@ -1,11 +1,11 @@
-package main;
+package main.java;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CommonPage extends BasePage {
-    @FindBy(linkText="Sign out")
+    @FindBy(linkText = "Sign out")
     private WebElement logoutButton;
 
     public CommonPage(WebDriver driver) {

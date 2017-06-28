@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,28 +6,28 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class IssuePage extends CommonPage {
-    @FindBy(id="issue_tracker_id")
+    @FindBy(id = "issue_tracker_id")
     private WebElement issueType;
 
-    @FindBy(id="issue_subject")
+    @FindBy(id = "issue_subject")
     private WebElement issueTitle;
 
-    @FindBy(id="issue_description")
+    @FindBy(id = "issue_description")
     private WebElement issueDescription;
 
-    @FindBy(name="commit")
+    @FindBy(name = "commit")
     private WebElement createBug;
 
-    @FindBy(linkText="More")
+    @FindBy(linkText = "More")
     private WebElement inspectBug;
 
-    @FindBy(id="issue_priority_id")
+    @FindBy(id = "issue_priority_id")
     private WebElement changeBugType;
 
-    @FindBy(id="issue_description")
+    @FindBy(id = "issue_description")
     private WebElement changeDescription;
 
-    @FindBy(css="#issue-form > input[name=\"commit\"]")
+    @FindBy(css = "#issue-form > input[name=\"commit\"]")
     private WebElement commit;
 
     public IssuePage(WebDriver driver) {
@@ -44,7 +44,7 @@ public class IssuePage extends CommonPage {
         return new CreateIssuePage(driver);
     }
 
-    public CreateIssuePage changeIssue(String bugType, String bugdescription){
+    public CreateIssuePage changeIssue(String bugType, String bugdescription) {
         inspectBug.click();
         new Select(changeBugType).selectByVisibleText(bugType);
         changeDescription.clear();

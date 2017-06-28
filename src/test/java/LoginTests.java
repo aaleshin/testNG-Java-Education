@@ -1,13 +1,11 @@
-package test;
+package test.java;
 
 import java.util.concurrent.TimeUnit;
 
-import main.HomePage;
-import main.LoginPage;
-import org.openqa.selenium.By;
+import main.java.HomePage;
+import main.java.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -20,7 +18,6 @@ public class LoginTests {
     private static final String passwd = "547348";
     private static final String client = "Aleshin";
     private static final String login = "Войти";
-
 
     @BeforeClass
     public void setUp() throws Exception {
@@ -58,15 +55,15 @@ public class LoginTests {
 
     @Test
     public void testErrorLogin() throws Exception {
-        final String wrongname = "aleshina";
-        final String wrongpasswd = "547348a";
+        final String wrongName = "aleshina";
+        final String wrongPasswd = "547348a";
         final String exept = "Неправильное имя пользователя или пароль";
 
         driver.get(baseUrl + "/");
 
         LoginPage loginPage = new LoginPage(driver);
-        HomePage page = loginPage.login(wrongname, wrongpasswd);
+        loginPage = loginPage.notLogin(wrongName, wrongPasswd);
 
-        Assert.assertEquals(exept, page.error.getText());
+        Assert.assertEquals(exept, loginPage.error.getText());
     }
 }

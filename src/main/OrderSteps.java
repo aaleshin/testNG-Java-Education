@@ -17,7 +17,7 @@ public class OrderSteps {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         baseUrl = "http://redmine-train.dev.thumbtack.net:3000/";
         loginPage = new LoginPage(driver);

@@ -28,7 +28,7 @@
                 <mainClass>cucumber.api.cli.Main</mainClass>
                 <arguments>
                     <argument>--format</argument>
-                    <argument>junit:target/cucumber-junit-report/allcukes.xml</argument>
+                    <argument>json:target/cucumber-json-report/report.json</argument>
                     <argument>--format</argument>
                     <argument>pretty</argument>
                     <argument>--format</argument>

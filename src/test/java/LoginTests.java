@@ -23,7 +23,7 @@ public class LoginTests {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "http://redmine-train.dev.thumbtack.net:3000/";
+        baseUrl = "http://";
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
@@ -55,8 +55,8 @@ public class LoginTests {
 
     @Test
     public void testErrorLogin() throws Exception {
-        final String wrongName = "aleshina";
-        final String wrongPasswd = "547348a";
+        final String wrongName = "***";
+        final String wrongPasswd = "***";
         final String exept = "Неправильное имя пользователя или пароль";
 
         driver.get(baseUrl + "/");

@@ -24,7 +24,7 @@ public class IssueTests {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D:\\downloads\\avtotests\\chromedriver.exe");
         driver = new ChromeDriver();
-        baseUrl = "http://redmine-train.dev.thumbtack.net:3000/";
+        baseUrl = "http://";
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 

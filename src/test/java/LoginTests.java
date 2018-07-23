@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 public class LoginTests {
     private WebDriver driver;
     private String baseUrl;
-    private static final String name = "aleshin";
-    private static final String passwd = "547348";
+    private static final String name = "***";
+    private static final String passwd = "***";
     private static final String client = "Aleshin";
     private static final String login = "Войти";
 
